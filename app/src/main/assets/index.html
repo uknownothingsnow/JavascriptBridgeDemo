@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>
+        js调用java
+    </title>
+</head>
+
+<body>
+    <p>
+        <input type="text" id="username" placeholder="username" />
+    </p>
+    <p>
+        <input type="button" id="enter1" value="调用Native方法showToast" onclick="showAndroidToast();"/>
+    </p>
+</body>
+<script>
+    function showAndroidToast() {
+        var username = document.getElementById("username").value;
+        Android.showToast("Hello " + username);
+    }
+
+    function myjavascriptfunc() {
+        Android.setResult("hoho");
+    }
+</script>
+
+</html>
